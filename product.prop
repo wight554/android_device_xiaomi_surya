@@ -18,3 +18,6 @@ ro.control_privapp_permissions=log
 
 # Set lmkd options
 ro.config.low_ram=false
+
+# Surfaceflinger
+debug.sf.early_phase_offset_ns=5000000
