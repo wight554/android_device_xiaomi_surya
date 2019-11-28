@@ -59,4 +59,5 @@ void vendor_load_properties() {
     property_override("ro.com.google.clientidbase.ms", "android-xiaomi-rvo3");
     property_override("ro.com.google.clientidbase.tx", "android-xiaomi-rvo3");
     property_override("ro.com.google.clientidbase.vs", "android-xiaomi-rvo3");
+    property_override("ro.oem_unlock_supported", "0");
 }
