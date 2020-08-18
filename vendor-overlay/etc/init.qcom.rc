@@ -30,3 +30,8 @@ on late-init
     start vendor.hwcomposer-2-3
     start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
+
+on init
+    # Report max frequency to unity tasks.
+    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
+    write /proc/sys/kernel/sched_lib_mask_force 255
