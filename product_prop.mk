@@ -22,3 +22,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Enable inband ringing
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.disableinbandringing=false
+
+# Set lmkd options
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.low_ram=false
