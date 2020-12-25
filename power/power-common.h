@@ -65,8 +65,6 @@ void power_init(void);
 void power_hint(power_hint_t hint, void *data);
 void set_interactive(int on);
 
-#define CHECK_HANDLE(x) ((x) > 0)
-
 #ifdef __cplusplus
 }
 #endif
