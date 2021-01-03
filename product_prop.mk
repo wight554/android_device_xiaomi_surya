@@ -23,6 +23,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.disableinbandringing=false
 
+# Priv-app permission
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log
+
 # Set lmkd options
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.low_ram=false
