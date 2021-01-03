@@ -34,6 +34,7 @@
 
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/stat.h>
 #include <sys/_system_properties.h>
 
 #include "property_service.h"
@@ -60,4 +61,8 @@ void vendor_load_properties() {
     property_override("ro.com.google.clientidbase.tx", "android-xiaomi-rvo3");
     property_override("ro.com.google.clientidbase.vs", "android-xiaomi-rvo3");
     property_override("ro.oem_unlock_supported", "0");
+
+    // Hide permissive state
+    chmod("/sys/fs/selinux/enforce", 0640);
+    chmod("/sys/fs/selinux/policy", 0440);
 }
