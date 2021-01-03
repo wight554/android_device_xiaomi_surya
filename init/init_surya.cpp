@@ -41,14 +41,6 @@
 
 using android::base::GetProperty;
 
-std::vector<std::string> ro_props_default_source_order = {
-    "",
-    "odm.",
-    "product.",
-    "system.",
-    "vendor.",
-};
-
 void property_override(char const prop[], char const value[], bool add = true) {
     prop_info *pi;
 
@@ -60,29 +52,8 @@ void property_override(char const prop[], char const value[], bool add = true) {
 }
 
 void vendor_load_properties() {
-    const auto set_ro_build_prop = [](const std::string &source,
-                                      const std::string &prop,
-                                      const std::string &value) {
-        auto prop_name = "ro." + source + "build." + prop;
-        property_override(prop_name.c_str(), value.c_str(), false);
-    };
-
-    const auto set_ro_product_prop = [](const std::string &source,
-                                        const std::string &prop,
-                                        const std::string &value) {
-        auto prop_name = "ro.product." + source + prop;
-        property_override(prop_name.c_str(), value.c_str(), false);
-    };
-
-    for (const auto &source : ro_props_default_source_order) {
-        set_ro_build_prop(source, "fingerprint",
-                          "POCO/surya_global/surya:10/QKQ1.200512.002/V12.0.2.0.QJGMIXM:user/release-keys");
-        set_ro_product_prop(source, "brand", "POCO");
-        set_ro_product_prop(source, "device", "surya");
-        set_ro_product_prop(source, "model", "M2007J20CG");
-    }
-    property_override("ro.build.fingerprint", "POCO/surya_global/surya:10/QKQ1.200512.002/V12.0.3.0.QJGMIXM:user/release-keys");
     property_override("ro.build.description", "surya_global-user 10 QKQ1.200512.002 V12.0.3.0.QJGMIXM release-keys");
+    property_override("ro.build.fingerprint", "POCO/surya_global/surya:10/QKQ1.200512.002/V12.0.3.0.QJGMIXM:user/release-keys");
     property_override("ro.com.google.clientidbase", "android-xiaomi");
     property_override("ro.com.google.clientidbase.ax", "android-xiaomi-rvo3");
     property_override("ro.com.google.clientidbase.ms", "android-xiaomi-rvo3");
