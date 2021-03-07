@@ -3,7 +3,6 @@ ro.bluetooth.library_name=libbluetooth.so
 
 # Camera
 vendor.camera.aux.packagelist=org.lineageos.snap,net.sourceforge.opencamera,org.codeaurora.snapcam
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
