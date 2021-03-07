@@ -53,7 +53,7 @@ void property_override(char const prop[], char const value[], bool add = true) {
 }
 
 void vendor_load_properties() {
-    property_override("ro.build.description", "surya_global-user 10 QKQ1.200512.002 V12.0.7.0.QJGMIXM release-keys");
+    property_override("ro.build.description", "surya_global-user 10 QKQ1.200512.002 V12.0.8.0.QJGMIXM release-keys");
     property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
     property_override("ro.com.google.clientidbase", "android-xiaomi");
     property_override("ro.com.google.clientidbase.ax", "android-xiaomi-rvo3");
